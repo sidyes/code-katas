@@ -1,5 +1,9 @@
 package com.codekatas.challenges.stringcalculator;
 
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+@ExtendWith(MockitoExtension.class)
 public class StringCalculatorServiceTest {
-  // TODO: Setup Junit5 test class
+  // TODO
 }
