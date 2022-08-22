@@ -9,9 +9,4 @@ public class ChristmasLightsService {
     // TODO
     return 0;
   }
-
-  public int modifyBrightness(ChristmasLightsGrid grid, CoordinatePair coordinates, Action action) {
-    // TODO
-    return 0;
-  }
 }

@@ -31,7 +31,9 @@ public class ChristmasLightsServiceTest {
     }
   }
 
-
+  /**
+   * Ignore the following tests for now. These are final tests.
+   */
   @Test
   @Disabled
   public void testModifyLightsShouldWinContest() {
@@ -64,40 +66,6 @@ public class ChristmasLightsServiceTest {
 
     Assertions.assertEquals(230022, result);
   }
-
-  @Test
-  @Disabled
-  public void testModifyBrightnessShouldWinContest() {
-    var step1 = createCoordinatePair(887, 9, 959, 629);
-    christmasLightsService.modifyBrightness(emptyGrid, step1, Action.TURN_ON);
-
-    var step2 = createCoordinatePair(454, 398, 844, 448);
-    christmasLightsService.modifyBrightness(emptyGrid, step2, Action.TURN_ON);
-
-    var step3 = createCoordinatePair(539, 243, 559, 965);
-    christmasLightsService.modifyBrightness(emptyGrid, step3, Action.TURN_OFF);
-
-    var step4 = createCoordinatePair(370,819, 676, 868);
-    christmasLightsService.modifyBrightness(emptyGrid, step4, Action.TURN_OFF);
-
-    var step5 = createCoordinatePair(145, 40, 370, 997);
-    christmasLightsService.modifyBrightness(emptyGrid, step5, Action.TURN_OFF);
-
-    var step6 = createCoordinatePair(301, 3, 808, 453);
-    christmasLightsService.modifyBrightness(emptyGrid, step6, Action.TURN_OFF);
-
-    var step7 = createCoordinatePair(351, 678, 951, 908);
-    christmasLightsService.modifyBrightness(emptyGrid, step7, Action.TURN_ON);
-
-    var step8 = createCoordinatePair(720, 196, 897, 994);
-    christmasLightsService.modifyBrightness(emptyGrid, step8, Action.TOGGLE);
-
-    var step9 = createCoordinatePair(831, 394, 904, 860);
-    var result = christmasLightsService.modifyBrightness(emptyGrid, step9, Action.TOGGLE);
-
-    Assertions.assertEquals(135339, result);
-  }
-
 
   /**
    * Helper method to create coordinate pairs.
