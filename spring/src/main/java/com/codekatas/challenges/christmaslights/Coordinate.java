@@ -23,6 +23,6 @@ public class Coordinate {
   }
 
   public int getColumn() {
-    return this.getColumn();
+    return this.column;
   }
 }
