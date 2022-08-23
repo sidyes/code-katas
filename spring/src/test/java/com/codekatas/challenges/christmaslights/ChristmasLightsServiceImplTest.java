@@ -11,12 +11,12 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import static com.codekatas.challenges.christmaslights.ChristmasLightsGrid.GRID_SIZE;
 
 @ExtendWith(MockitoExtension.class)
-public class ChristmasLightsServiceTest {
+public class ChristmasLightsServiceImplTest {
   private ChristmasLightsGrid emptyGrid;
   private ChristmasLightsGrid fulLGrid;
 
   @InjectMocks
-  private ChristmasLightsService christmasLightsService;
+  private ChristmasLightsServiceImpl christmasLightsService;
 
 
   @BeforeEach
@@ -46,7 +46,7 @@ public class ChristmasLightsServiceTest {
     var step3 = createCoordinatePair(539, 243, 559, 965);
     christmasLightsService.modifyLights(emptyGrid, step3, Action.TURN_OFF);
 
-    var step4 = createCoordinatePair(370,819, 676, 868);
+    var step4 = createCoordinatePair(370, 819, 676, 868);
     christmasLightsService.modifyLights(emptyGrid, step4, Action.TURN_OFF);
 
     var step5 = createCoordinatePair(145, 40, 370, 997);
@@ -78,9 +78,11 @@ public class ChristmasLightsServiceTest {
    */
   private CoordinatePair createCoordinatePair(int rowStart, int columnStart, int rowEnd,
                                               int columnEnd) {
-    return CoordinatePair.builder()
-                         .from(Coordinate.builder().row(rowStart).column(columnStart).build())
-                         .to(Coordinate.builder().row(rowEnd).column(columnEnd).build()).build();
+    Coordinate from = new Coordinate(rowStart, columnStart);
+    Coordinate to = new Coordinate(rowEnd, columnEnd);
+
+    CoordinatePair pair = new CoordinatePair(from, to);
+    return pair;
   }
 
 }

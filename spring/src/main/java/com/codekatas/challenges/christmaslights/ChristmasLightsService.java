@@ -1,12 +1,6 @@
 package com.codekatas.challenges.christmaslights;
 
-import org.springframework.stereotype.Service;
+public interface ChristmasLightsService {
 
-@Service
-public class ChristmasLightsService {
-
-  public int modifyLights(ChristmasLightsGrid grid, CoordinatePair coordinates, Action action) {
-    // TODO
-    return 0;
-  }
+  int modifyLights(ChristmasLightsGrid grid, CoordinatePair coordinates, Action action);
 }
