@@ -5,7 +5,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static com.codekatas.challenges.christmaslights.ChristmasLightsGrid.GRID_SIZE;
@@ -15,8 +14,8 @@ public class ChristmasLightsServiceImplTest {
   private ChristmasLightsGrid emptyGrid;
   private ChristmasLightsGrid fulLGrid;
 
-  @InjectMocks
-  private ChristmasLightsServiceImpl christmasLightsService;
+  // FIXME: use ChristmastLightsServiceImpl implementation of the interface
+  private ChristmasLightsService christmasLightsService;
 
 
   @BeforeEach
