@@ -7,13 +7,13 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import static com.codekatas.challenges.christmaslights.ChristmasLightsGrid.GRID_SIZE;
 
 @ExtendWith(MockitoExtension.class)
-public class ChristmasLightsGridTest {
+class ChristmasLightsGridTest {
   private ChristmasLightsGrid fullGrid;
   private ChristmasLightsGrid emptyGrid;
 
 
   @BeforeEach
-  public void setup() {
+  void setup() {
     fullGrid = new ChristmasLightsGrid();
     emptyGrid = new ChristmasLightsGrid();
     for (int i = 0; i < GRID_SIZE; i++) {

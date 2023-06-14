@@ -1,6 +1,5 @@
 package com.codekatas.challenges.christmaslights;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -8,9 +7,10 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static com.codekatas.challenges.christmaslights.ChristmasLightsGrid.GRID_SIZE;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(MockitoExtension.class)
-public class ChristmasLightsServiceImplTest {
+class ChristmasLightsServiceImplTest {
   private ChristmasLightsGrid emptyGrid;
   private ChristmasLightsGrid fulLGrid;
 
@@ -19,7 +19,7 @@ public class ChristmasLightsServiceImplTest {
 
 
   @BeforeEach
-  public void setup() {
+  void setup() {
     emptyGrid = new ChristmasLightsGrid();
     fulLGrid = new ChristmasLightsGrid();
 
@@ -35,7 +35,7 @@ public class ChristmasLightsServiceImplTest {
    */
   @Test
   @Disabled
-  public void testModifyLightsShouldWinContest() {
+  void testModifyLightsShouldWinContest() {
     var step1 = createCoordinatePair(887, 9, 959, 629);
     christmasLightsService.modifyLights(emptyGrid, step1, Action.TURN_ON);
 
@@ -63,7 +63,7 @@ public class ChristmasLightsServiceImplTest {
     var step9 = createCoordinatePair(831, 394, 904, 860);
     var result = christmasLightsService.modifyLights(emptyGrid, step9, Action.TOGGLE);
 
-    Assertions.assertEquals(230022, result);
+    assertEquals(230022, result);
   }
 
   /**
